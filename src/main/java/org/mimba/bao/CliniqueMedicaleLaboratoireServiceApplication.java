@@ -13,7 +13,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableEurekaClient
 @SpringBootApplication(exclude = EndpointMBeanExportAutoConfiguration.class)
 public class CliniqueMedicaleLaboratoireServiceApplication implements CommandLineRunner {
-	@Autowired
+	@Autowired 
 	private IImagerieRepository iImagerieRepository;
 	public static void main(String[] args) {
 		SpringApplication.run(CliniqueMedicaleLaboratoireServiceApplication.class, args);
