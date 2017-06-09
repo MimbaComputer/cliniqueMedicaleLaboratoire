@@ -24,7 +24,7 @@ public interface IImagerieRepository extends JpaRepository<Imagerie, Long> {
 	@Query("select i from Imagerie i where i.patient.id=:id")
 	public Page<Imagerie> listeImageriePatient(@Param("id") Long id, Pageable pageable);
 	
-	@Query("select i from Imagerie i where i.casASuivre.id=:id")
-	public Page<Imagerie> listeImagerieCasASuivre(@Param("id") Long id, Pageable pageable);
+	@Query("select i from Imagerie i where i.casASuivre.id=:idCasASuivre")
+	public Page<Imagerie> listeImagerieCasASuivre(@Param("idCasASuivre") Long idCasASuivre, Pageable pageable);
 	
 }
